@@ -1,0 +1,31 @@
+{
+  "name": "emailflow-pro-backend",
+  "version": "1.0.0",
+  "description": "EmailFlow Pro backend API",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:migrate": "wrangler d1 migrations apply emailflow-pro-db"
+  },
+  "dependencies": {
+    "hono": "^3.11.7",
+    "drizzle-orm": "^0.29.1",
+    "@cloudflare/workers-types": "^4.20231121.0",
+    "hono-rate-limiter": "^0.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "zod": "^3.22.4",
+    "groq-sdk": "^0.3.3",
+    "openai": "^4.20.1",
+    "googleapis": "^130.0.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/bcryptjs": "^2.4.6",
+    "drizzle-kit": "^0.20.6",
+    "typescript": "^5.2.2"
+  }
+}
